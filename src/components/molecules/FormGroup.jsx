@@ -1,13 +1,13 @@
 import React from "react";
-import Button from "./../atoms/Button";
-import Input from "./../atoms/Input";
+import Button from "../atoms/button/Button";
+import Input from "./../atoms/input/Input";
 
 const FormGroup = ({ inputProps, buttonProps }) => {
   const styles = {
     display: "flex",
     gap: "10px",
-    maxWidth: 500,
     margin: "auto",
+    justifyContent: "center",
   };
 
   return (

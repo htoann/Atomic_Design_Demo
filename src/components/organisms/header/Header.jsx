@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "./../atoms/Heading";
+import Heading from "../../atoms/Heading";
 
 const Header = () => {
   const styles = {

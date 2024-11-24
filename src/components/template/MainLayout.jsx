@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../organisms/Footer";
-import Header from "./../organisms/Header";
+import Footer from "../organisms/footer/Footer";
+import Header from "../organisms/header/Header";
 
 const MainLayout = ({ children }) => {
   const styles = {

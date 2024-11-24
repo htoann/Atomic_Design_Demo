@@ -5,7 +5,7 @@ const Input = ({ placeholder, value, onChange }) => {
     padding: "10px",
     border: "1px solid #ccc",
     borderRadius: "4px",
-    width: "100%",
+    width: "300px",
   };
 
   return (
