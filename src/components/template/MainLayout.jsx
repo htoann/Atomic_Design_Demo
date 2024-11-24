@@ -13,6 +13,9 @@ const MainLayout = ({ children }) => {
     main: {
       flex: "1",
       padding: "20px",
+      display: "flex",
+      alignItems: "center",
+      margin: "auto",
     },
   };
 

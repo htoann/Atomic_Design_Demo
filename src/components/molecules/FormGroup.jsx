@@ -6,8 +6,6 @@ const FormGroup = ({ inputProps, buttonProps }) => {
   const styles = {
     display: "flex",
     gap: "10px",
-    margin: "auto",
-    justifyContent: "center",
   };
 
   return (
