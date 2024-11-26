@@ -1,87 +1,56 @@
-import React from "react";
 import Button from "./Button";
-import { storyWrapper } from "./Button.style";
 
 export default {
   title: "Atoms/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {
-    type: {
-      default: "default",
-      options: ["default", "primary"],
-      control: { type: "select" },
+    disabled: {
+      description: "Disabled state of button",
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false },
+      },
+    },
+    label: {
+      description: "Set button label",
+    },
+    onClick: {
+      description: "Set onClick event handler",
+      type: "function",
     },
     size: {
       options: ["small", "medium", "large"],
-      control: { type: "select" },
+      control: "select",
+      type: '"small" | "medium" | "large"',
+      description: "Set button size",
+      table: {
+        defaultValue: { summary: '"medium"' },
+      },
+    },
+    style: {
+      type: "CSSProperties",
+    },
+    type: {
+      type: '"default" | "primary"',
+      description: "Set button type",
+      control: "select",
+      options: ["default", "primary"],
+      defaultValue: '"default"',
+      table: {
+        defaultValue: { summary: '"default"' },
+      },
     },
   },
 };
 
-const Template = (args) => (
-  <div style={storyWrapper}>
-    {args.options.map((option) => {
-      return (
-        <Button
-          key={option}
-          {...args.baseProps}
-          {...{ [args.key]: option }}
-          label={option.charAt(0).toUpperCase() + option.slice(1)}
-        />
-      );
-    })}
-  </div>
-);
-
-export const Basic = {
+export const Playground = {
   args: {
-    type: "default",
     disabled: false,
     label: "Button",
+    onClick: () => {},
     size: "medium",
+    style: undefined,
+    type: "default",
   },
 };
-
-export const Type = Template.bind({});
-Type.args = {
-  key: "type",
-  options: ["default", "primary"],
-  baseProps: {},
-};
-
-export const Size = Template.bind({});
-Size.args = {
-  key: "size",
-  options: ["small", "medium", "large"],
-  baseProps: {
-    type: "primary",
-    disabled: false,
-  },
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  key: "type",
-  options: ["default", "primary"],
-  baseProps: {
-    size: "medium",
-    disabled: true,
-  },
-};
-
-// export const Primary = Template.bind({});
-// Primary.args = {
-//   type: "primary",
-//   label: "Button",
-//   size: "medium",
-//   disabled: false,
-// };
-
-// export const Disabled = Template.bind({});
-// Disabled.args = {
-//   type: "primary",
-//   label: "Button",
-//   size: "medium",
-//   disabled: true,
-// };
