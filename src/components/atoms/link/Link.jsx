@@ -1,18 +1,19 @@
 import React from "react";
 
+const defaultStyles = {
+  fontFamily: "'Segoe UI', sans-serif",
+  color: "#000",
+  textDecoration: "none",
+  fontSize: "16px",
+  transition: "color 0.3s ease, text-decoration 0.3s ease",
+};
+
+const hoverStyles = {
+  textDecoration: "underline",
+  color: "#007bff",
+};
+
 const Link = ({ href, children, style }) => {
-  const defaultStyles = {
-    color: "#000",
-    textDecoration: "none",
-    fontSize: "16px",
-    transition: "color 0.3s ease, text-decoration 0.3s ease",
-  };
-
-  const hoverStyles = {
-    textDecoration: "underline",
-    color: "#007bff",
-  };
-
   return (
     <a
       href={href}

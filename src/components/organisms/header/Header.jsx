@@ -2,45 +2,45 @@ import React from "react";
 import Button from "../../atoms/button/Button";
 import Navigation from "../../molecules/navigation/Navigation";
 
+const styles = {
+  header: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "20px 48px",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    position: "relative",
+    borderBottom: "1px solid #007bff",
+  },
+  logo: {
+    fontSize: "24px",
+    fontWeight: "bold",
+    color: "#007bff",
+    display: "flex",
+    alignItems: "center",
+    gap: "4px",
+  },
+  nav: {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-50%)",
+  },
+  actionsWrapper: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+  },
+};
+
+const navigationItems = [
+  { key: "home", title: "Home", link: "#home" },
+  { key: "blogs", title: "Blogs", link: "#blogs" },
+  { key: "about", title: "About", link: "#about" },
+  { key: "contact", title: "Contact", link: "#contact" },
+];
+
 const Header = () => {
-  const styles = {
-    header: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      padding: "20px 48px",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      position: "relative",
-      borderBottom: "1px solid #007bff",
-    },
-    logo: {
-      fontSize: "24px",
-      fontWeight: "bold",
-      color: "#007bff",
-      display: "flex",
-      alignItems: "center",
-      gap: "4px",
-    },
-    nav: {
-      position: "absolute",
-      left: "50%",
-      transform: "translateX(-50%)",
-    },
-    actionsWrapper: {
-      display: "flex",
-      alignItems: "center",
-      gap: "8px",
-    },
-  };
-
-  const navigationItems = [
-    { key: "home", title: "Home", link: "#home" },
-    { key: "blogs", title: "Blogs", link: "#blogs" },
-    { key: "about", title: "About", link: "#about" },
-    { key: "contact", title: "Contact", link: "#contact" },
-  ];
-
   return (
     <header style={styles.header}>
       <div style={styles.logo}>

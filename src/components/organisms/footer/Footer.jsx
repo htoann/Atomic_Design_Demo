@@ -2,30 +2,30 @@ import React from "react";
 import Link from "../../atoms/link/Link";
 import FormGroup from "../../molecules/form-group/FormGroup";
 
-const Footer = () => {
-  const styles = {
-    container: {
-      display: "flex",
-      alignItems: "start",
-      justifyContent: "space-between",
-      padding: "28px 32px 20px",
-      backgroundColor: "#343a40",
-      color: "#fff",
-      marginTop: "20px",
-      height: "140px",
-      fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-    },
-    links: {
-      display: "flex",
-      gap: "15px",
-    },
-    text: {
-      fontSize: "14px",
-      marginTop: "10px",
-      color: "#6c757d",
-    },
-  };
+const styles = {
+  container: {
+    display: "flex",
+    alignItems: "start",
+    justifyContent: "space-between",
+    padding: "28px 32px 20px",
+    backgroundColor: "#343a40",
+    color: "#fff",
+    marginTop: "20px",
+    height: "140px",
+    fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+  },
+  links: {
+    display: "flex",
+    gap: "15px",
+  },
+  text: {
+    fontSize: "14px",
+    marginTop: "10px",
+    color: "#6c757d",
+  },
+};
 
+const Footer = () => {
   return (
     <footer style={styles.container}>
       <div style={styles.leftPart}>

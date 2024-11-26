@@ -1,13 +1,14 @@
 const baseStyles = {
   label: {
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: 600,
   },
   wrapper: {
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
-    gap: "12px",
+    gap: "6px",
+    fontFamily: "'Segoe UI', sans-serif",
   },
   field: {
     display: "flex",
@@ -17,13 +18,13 @@ const baseStyles = {
 
 const largeStyles = {
   label: {
-    fontSize: "15px",
+    fontSize: "16px",
   },
 };
 
 const smallStyles = {
   label: {
-    fontSize: "13px",
+    fontSize: "14px",
   },
 };
 
