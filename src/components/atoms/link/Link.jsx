@@ -10,6 +10,7 @@ const Link = ({ href, children, style }) => {
 
   const hoverStyles = {
     textDecoration: "underline",
+    color: "#007bff",
   };
 
   return (
@@ -20,7 +21,10 @@ const Link = ({ href, children, style }) => {
         Object.assign(e.target.style, hoverStyles);
       }}
       onMouseLeave={(e) => {
-        Object.assign(e.target.style, { textDecoration: "none" });
+        Object.assign(e.target.style, {
+          textDecoration: "none",
+          color: "unset",
+        });
       }}
     >
       {children}

@@ -1,23 +1,23 @@
 import React from "react";
 import Link from "../../atoms/link/Link";
+import FormGroup from "../../molecules/form-group/FormGroup";
 
 const Footer = () => {
   const styles = {
     container: {
       display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "20px",
+      alignItems: "start",
+      justifyContent: "space-between",
+      padding: "28px 32px 20px",
       backgroundColor: "#343a40",
       color: "#fff",
       marginTop: "20px",
+      height: "140px",
       fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
     },
     links: {
       display: "flex",
       gap: "15px",
-      margin: "10px 0",
     },
     text: {
       fontSize: "14px",
@@ -28,20 +28,28 @@ const Footer = () => {
 
   return (
     <footer style={styles.container}>
-      <div style={styles.links}>
-        <Link href="#privacy" style={{ color: "#adb5bd" }}>
-          Privacy Policy
-        </Link>
-        <Link href="#terms" style={{ color: "#adb5bd" }}>
-          Terms of Service
-        </Link>
-        <Link href="#contact" style={{ color: "#adb5bd" }}>
-          Contact Us
-        </Link>
+      <div style={styles.leftPart}>
+        <div style={styles.links}>
+          <Link href="#privacy" style={{ color: "unset" }}>
+            Privacy Policy
+          </Link>
+          <Link href="#terms" style={{ color: "unset" }}>
+            Terms of Service
+          </Link>
+          <Link href="#contact" style={{ color: "unset" }}>
+            Contact Us
+          </Link>
+        </div>
+        <p style={styles.text}>
+          © 2024 Atomic Design Demo by ACS DEV 5. All rights reserved.
+        </p>
       </div>
-      <p style={styles.text}>
-        © 2024 Atomic Design Demo by ACS DEV 5. All rights reserved.
-      </p>
+      <FormGroup
+        size={"small"}
+        label={"Subscribe to our Newsletters"}
+        buttonProps={{ label: "Subscribe" }}
+        inputProps={{ placeholder: "Enter your email" }}
+      />
     </footer>
   );
 };

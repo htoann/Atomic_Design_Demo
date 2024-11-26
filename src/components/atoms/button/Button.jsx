@@ -1,18 +1,15 @@
 import React from "react";
+import { getButtonStyles } from "./Button.style";
 
-const Button = ({ label, onClick, disabled }) => {
-  const styles = {
-    padding: "10px 20px",
-    backgroundColor: disabled ? "#6c757d" : "#007bff",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-    cursor: disabled ? "not-allowed" : "pointer",
-    opacity: disabled ? 0.65 : 1,
-  };
+const Button = ({ label, onClick, disabled, style, type, size }) => {
+  const styles = getButtonStyles(type, size, disabled);
 
   return (
-    <button style={styles} onClick={onClick} disabled={disabled}>
+    <button
+      style={{ ...styles, ...style }}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {label}
     </button>
   );

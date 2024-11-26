@@ -1,5 +1,5 @@
 import React from "react";
-import FormGroup from "../molecules/FormGroup";
+import FormGroup from "../molecules/form-group/FormGroup";
 import MainLayout from "./../template/MainLayout";
 
 const HomePage = () => {
@@ -10,22 +10,24 @@ const HomePage = () => {
   return (
     <MainLayout>
       <div style={styles.container}>
-        <h1 style={styles.heading}>Subscribe to our Newsletter</h1>
+        <h1 style={styles.heading}>Discover Atomic Design</h1>
         <p style={styles.description}>
-          Stay updated with the latest news, tutorials, and resources delivered
-          straight to your inbox.
+          Dive into the world of Atomic Design and explore blogs that demystify
+          this innovative methodology.
         </p>
-        <div style={styles.formGroupContainer}>
-          <FormGroup
-            inputProps={{
-              placeholder: "Enter your email address",
-            }}
-            buttonProps={{
-              label: "Subscribe",
-              onClick: handleSubscription,
-            }}
-          />
-        </div>
+        <FormGroup
+          size={"large"}
+          inputProps={{
+            placeholder: "Search blogs, guides, or case studies...",
+            style: {
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+            },
+          }}
+          buttonProps={{
+            label: "Explore",
+            onClick: handleSubscription,
+          }}
+        />
       </div>
     </MainLayout>
   );
@@ -33,8 +35,9 @@ const HomePage = () => {
 
 const styles = {
   container: {
-    textAlign: "center",
-    marginTop: "50px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     padding: "20px",
     fontFamily: "'Segoe UI', sans-serif",
   },

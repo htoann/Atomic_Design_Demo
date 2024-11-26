@@ -1,17 +1,13 @@
 import React from "react";
+import { getInputStyles } from "./Input.style";
 
-const Input = ({ placeholder, value, onChange }) => {
-  const styles = {
-    padding: "10px",
-    border: "1px solid #ccc",
-    borderRadius: "4px",
-    width: "300px",
-  };
+const Input = ({ placeholder, value, onChange, style, size, label }) => {
+  const styles = getInputStyles(size);
 
   return (
     <input
       type="text"
-      style={styles}
+      style={{ ...styles, ...style }}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
