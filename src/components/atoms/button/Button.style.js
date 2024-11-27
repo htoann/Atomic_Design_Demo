@@ -56,8 +56,3 @@ export const getButtonStyles = (
     ...(disabled && type === "primary" && disabledPrimaryStyles),
   };
 };
-
-export const storyWrapper = {
-  display: "flex",
-  gap: "8px",
-};

@@ -7,7 +7,6 @@ export default {
   argTypes: {
     disabled: {
       description: "Disabled state of button",
-      defaultValue: false,
       table: {
         defaultValue: { summary: false },
       },

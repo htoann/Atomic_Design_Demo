@@ -10,11 +10,13 @@ const baseStyles = {
 
 const largeStyles = {
   fontSize: "15px",
+  padding: "0 12px",
   height: "40px",
 };
 
 const smallStyles = {
   fontSize: "13px",
+  padding: "0 8px",
   height: "32px",
 };
 
